@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    <div>Lakshya</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/port1-project.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/port1-project-icon.png">
+                        </div>
+                        <div class="subtitle">
+                            Projects
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/port2-acad.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/port2-acad-icon.png">
+                        </div>
+                        <div class="subtitle">
+                            Academics
+                        </div>
+                        </div>
+                </div>
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/port3-photography.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/port3-photography-icon.png">
+                        </div>
+                        <div class="subtitle">
+                            Photography
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/port4-music.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/port4-music-icon.png">
+                        </div>
+                        <div class="subtitle">
+                            Audio Production
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/port5-design.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/port5-design-icon.png">
+                        </div>
+                        <div class="subtitle">
+                            Design
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/port6-other.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/port6-other-icon.png">
+                        </div>
+                        <div class="subtitle">
+                            Other Interests
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    //portfolioItem is iterator variable
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', ()=>{
+            // console.log(portfolioItem.childNodes)
+            // console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('img-lighten');
+            portfolioItem.childNodes[1].classList.add('img-darken');
+            
+        })
+
+        portfolioItem.addEventListener('mouseout', ()=>{
+            // console.log(portfolioItem.childNodes)
+            // console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+            portfolioItem.childNodes[1].classList.add('img-lighten');
+        })
+    })
+</script>
+</html>
